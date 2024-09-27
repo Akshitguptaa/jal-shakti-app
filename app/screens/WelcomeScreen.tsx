@@ -21,6 +21,7 @@ type Props = NativeStackScreenProps<RootStackParamList, "Welcome">;
 
 const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
   return (
+    
     <SafeAreaView  className="flex-1 bg-background">
       <View className="flex-1 justify-center align-center">
         <ImageBackground
@@ -28,29 +29,29 @@ const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
           resizeMode="cover"
           source={require("../assets/images/welcome-img.png")}
         />
-        <View style={styles.textContainer}>
-          <Text class="text-3xl text-primary font-bold text-center mb-4">
+        <View className="px-4 pt-2 items-center">
+          <Text className="text-3xl text-primary font-bold text-center mb-4">
             Discover Your Dream Job Here
           </Text>
-          <Text class="text-sm text-gray-600 font-normal text-center mt-4">
+          <Text className="text-sm text-gray-600 font-normal text-center mt-4">
             Explore all the existing job roles based on your interest and study major.
           </Text>
         </View>
-        <View style={styles.buttonContainer}>
+        <View className="px-2 pt-6 flex flex-row justify-between w-full">
           <TouchableOpacity
             onPress={() => navigate("Login")}
-            style={styles.loginButton}
+            className="bg-indigo-700 py-1.5 px-2 w-48 rounded shadow-md"
           >
-            <Text style={styles.buttonText}>
+            <Text className="font-poppins-bold text-zinc-50 text-lg text-center">
               Login
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => navigate("Register")}
-            style={styles.registerButton}
+            className="py-1.5 px-2 w-48 rounded border border-primary justify-center items-center flex"
           >
-            <Text style={styles.buttonText}>
-              Register
+            <Text className="font-poppins-bold text-onPrimary text-lg text-center">
+              Admin Login
             </Text>
           </TouchableOpacity>
         </View>

@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types";
@@ -13,6 +13,14 @@ import AppTextInput from "../AppTextInput";
 type Props = NativeStackScreenProps<RootStackParamList, "Login">;
 
 const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
+  const [customerId, setCustomerId] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignIn = () => {
+    // You can add validation or API calls here
+    navigate("Home");
+  };
+
   return (
     <SafeAreaView className="flex-1 p-8">
       <View className="flex-1 justify-center">
@@ -24,15 +32,27 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
         </View>
         
         <View className="mb-12">
-          <AppTextInput placeholder="Customer Id" />
-          <AppTextInput placeholder="Password" secureTextEntry />
+          <AppTextInput
+            placeholder="Customer Id"
+            value={customerId}
+            onChangeText={setCustomerId} // Handle input change
+          />
+          <AppTextInput
+            placeholder="Password"
+            secureTextEntry
+            value={password}
+            onChangeText={setPassword} // Handle input change
+          />
         </View>
 
         <Text className="font-semibold text-sm text-primary self-end mb-3">
           Forgot your password?
         </Text>
 
-        <TouchableOpacity className="bg-primary py-3 rounded-lg shadow-lg mb-6">
+        <TouchableOpacity 
+          className="bg-primary py-3 rounded-lg shadow-lg mb-6"
+          onPress={handleSignIn}
+        >
           <Text className="font-bold text-white text-lg text-center">
             Sign In
           </Text>

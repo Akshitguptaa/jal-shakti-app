@@ -17,16 +17,16 @@ const RegisterScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
     <SafeAreaView className="flex-1 p-8 justify-center">
       <View className="flex-1 justify-center">
         <View className="items-center mb-12">
-          <Text className="text-3xl text-primary font-bold mb-3">Create Account</Text>
+          <Text className="text-3xl text-primary font-bold mb-3">ADMIN LOGIN</Text>
           <Text className="font-regular text-lg text-center max-w-xs">
-            Create an account to explore all available jobs.
+            Enter your credentials for GP/PHED
           </Text>
         </View>
 
         <View className="mb-12">
-          <AppTextInput placeholder="Email" />
+          <AppTextInput placeholder="UserID / Mobile Number" />
           <AppTextInput placeholder="Password" secureTextEntry />
-          <AppTextInput placeholder="Confirm Password" secureTextEntry />
+          {/* <AppTextInput placeholder="Confirm Password" secureTextEntry /> */}
         </View>
 
         <TouchableOpacity className="bg-primary py-3 rounded-lg shadow-lg mb-6">

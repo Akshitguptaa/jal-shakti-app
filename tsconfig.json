@@ -15,5 +15,5 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "nativewind-env.d.ts"
-  ]
+, "app/onboard/welcome.js", "app/navigation/appNavigation.js", "app/screens/dashboard.js", "app/screens/home.tsx"  ]
 }
