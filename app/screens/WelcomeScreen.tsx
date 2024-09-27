@@ -29,7 +29,11 @@ const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
           resizeMode="cover"
           source={require("../assets/images/welcome-img.png")}
         />
+<<<<<<< HEAD
         <View className="px-4 pt-2 items-center">
+=======
+        <View style={styles.textContainer}>
+>>>>>>> 8e048e229b6b9dc3ec3c815891a899d31d4da85e
           <Text className="text-3xl text-primary font-bold text-center mb-4">
             Discover Your Dream Job Here
           </Text>
@@ -50,8 +54,13 @@ const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
             onPress={() => navigate("Register")}
             className="py-1.5 px-2 w-48 rounded border border-primary justify-center items-center flex"
           >
+<<<<<<< HEAD
             <Text className="font-poppins-bold text-onPrimary text-lg text-center">
               Admin Login
+=======
+            <Text style={styles.buttonTextDark}>
+              Register
+>>>>>>> 8e048e229b6b9dc3ec3c815891a899d31d4da85e
             </Text>
           </TouchableOpacity>
         </View>
@@ -122,6 +131,12 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: Font["poppins-bold"],
     color: Colors.onPrimary,
+    fontSize: FontSize.large,
+    textAlign: "center",
+  },
+  buttonTextDark: {
+    fontFamily: Font["poppins-bold"],
+    color: Colors.primary,
     fontSize: FontSize.large,
     textAlign: "center",
   },
