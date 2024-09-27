@@ -29,10 +29,10 @@ const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
           source={require("../assets/images/welcome-img.png")}
         />
         <View style={styles.textContainer}>
-          <Text class="text-3xl text-primary font-bold text-center mb-4">
+          <Text className="text-3xl text-primary font-bold text-center mb-4">
             Discover Your Dream Job Here
           </Text>
-          <Text class="text-sm text-gray-600 font-normal text-center mt-4">
+          <Text className="text-sm text-gray-600 font-normal text-center mt-4">
             Explore all the existing job roles based on your interest and study major.
           </Text>
         </View>
@@ -49,7 +49,7 @@ const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
             onPress={() => navigate("Register")}
             style={styles.registerButton}
           >
-            <Text style={styles.buttonText}>
+            <Text style={styles.buttonTextDark}>
               Register
             </Text>
           </TouchableOpacity>
@@ -121,6 +121,12 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: Font["poppins-bold"],
     color: Colors.onPrimary,
+    fontSize: FontSize.large,
+    textAlign: "center",
+  },
+  buttonTextDark: {
+    fontFamily: Font["poppins-bold"],
+    color: Colors.primary,
     fontSize: FontSize.large,
     textAlign: "center",
   },

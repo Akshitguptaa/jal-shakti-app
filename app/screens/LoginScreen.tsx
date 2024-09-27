@@ -11,6 +11,9 @@ import { RootStackParamList } from "../types";
 import AppTextInput from "../AppTextInput";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Login">;
+type IoniconsName = keyof typeof Ionicons.glyphMap;
+
+const icons: IoniconsName[] = ['logo-google', 'logo-apple', 'logo-facebook'];
 
 const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
   return (
@@ -49,9 +52,9 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
             Or continue with
           </Text>
           <View className="flex-row justify-center mt-2">
-            {['logo-google', 'logo-apple', 'logo-facebook'].map((icon, index) => (
+            {icons.map((icon, index) => (
               <TouchableOpacity key={index} className="bg-gray-300 rounded-full p-3 mx-2">
-                <Ionicons name={icon} color="#000" size={24} />
+                <Ionicons name={icon} size={24} color="black" />
               </TouchableOpacity>
             ))}
           </View>
