@@ -21,48 +21,44 @@ type Props = NativeStackScreenProps<RootStackParamList, "Welcome">;
 
 const WelcomeScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
   return (
-    
-    <SafeAreaView  className="flex-1 bg-background">
+
+    <SafeAreaView className="flex-1 bg-background">
       <View className="flex-1 justify-center align-center">
         <ImageBackground
           style={styles.imageBackground}
           resizeMode="cover"
           source={require("../assets/images/welcome-img.png")}
         />
-<<<<<<< HEAD
         <View className="px-4 pt-2 items-center">
-=======
-        <View style={styles.textContainer}>
->>>>>>> 8e048e229b6b9dc3ec3c815891a899d31d4da85e
-          <Text className="text-3xl text-primary font-bold text-center mb-4">
-            Discover Your Dream Job Here
-          </Text>
-          <Text className="text-sm text-gray-600 font-normal text-center mt-4">
-            Explore all the existing job roles based on your interest and study major.
-          </Text>
-        </View>
-        <View className="px-2 pt-6 flex flex-row justify-between w-full">
-          <TouchableOpacity
-            onPress={() => navigate("Login")}
-            className="bg-indigo-700 py-1.5 px-2 w-48 rounded shadow-md"
-          >
-            <Text className="font-poppins-bold text-zinc-50 text-lg text-center">
-              Login
+          <View style={styles.textContainer}>
+            <Text className="text-3xl text-primary font-bold text-center mb-4">
+              Discover Your Dream Job Here
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => navigate("Register")}
-            className="py-1.5 px-2 w-48 rounded border border-primary justify-center items-center flex"
-          >
-<<<<<<< HEAD
-            <Text className="font-poppins-bold text-onPrimary text-lg text-center">
-              Admin Login
-=======
-            <Text style={styles.buttonTextDark}>
-              Register
->>>>>>> 8e048e229b6b9dc3ec3c815891a899d31d4da85e
+            <Text className="text-sm text-gray-600 font-normal text-center mt-4">
+              Explore all the existing job roles based on your interest and study major.
             </Text>
-          </TouchableOpacity>
+          </View>
+          <View className="px-2 pt-6 flex flex-row justify-between w-full">
+            <TouchableOpacity
+              onPress={() => navigate("Login")}
+              className="bg-indigo-700 py-1.5 px-2 w-48 rounded shadow-md"
+            >
+              <Text className="font-poppins-bold text-zinc-50 text-lg text-center">
+                Login
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigate("Register")}
+              className="py-1.5 px-2 w-48 rounded border border-primary justify-center items-center flex"
+            >
+              <Text className="font-poppins-bold text-onPrimary text-lg text-center">
+                Admin Login
+              </Text>
+              <Text style={styles.buttonTextDark}>
+                Register
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>
@@ -73,7 +69,7 @@ export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   imageBackground: {
-    height: height /2,
+    height: height / 2,
     width: '100%',
     justifyContent: 'flex-end',
     alignItems: 'center',
